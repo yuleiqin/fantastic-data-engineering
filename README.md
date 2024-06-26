@@ -18,7 +18,7 @@
 
 If you like this Repo, Please click the :star:
 
-List of `awesome README Profile` categories mentioned below --> -->
+List of `awesome README Profile` categories mentioned below -->
 
 ## Contents
   <!-- - [Github README PROFILE CATEGORY](#github-readme-profile-category)
