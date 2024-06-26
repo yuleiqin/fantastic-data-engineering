@@ -1,5 +1,5 @@
-<h1 align="center">Awesome README Templates</h1>
-<p align="center"><i>A collection of awesome readme templates to display on your github profile.</i></p>
+<h1 align="center">Fantastic Data Engineering for Large Language Models</h1>
+<p align="center"><i>A collection of data engineering methods for pretraining and aligning large language models.</i></p>
 <div align="center">
   <a href="https://github.com/yuleiqin/fantastic-data-engineering/stargazers"><img src="https://img.shields.io/github/stars/yuleiqin/fantastic-data-engineering" alt="Stars Badge"/></a>
 <a href="https://github.com/yuleiqin/fantastic-data-engineering/network/members"><img src="https://img.shields.io/github/forks/yuleiqin/fantastic-data-engineering" alt="Forks Badge"/></a>
@@ -8,33 +8,32 @@
 <a href="https://github.com/yuleiqin/fantastic-data-engineering/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/yuleiqin/fantastic-data-engineering?color=2b9348"></a>
 <a href="https://github.com/yuleiqin/fantastic-data-engineering/blob/master/LICENSE"><img src="https://img.shields.io/github/license/yuleiqin/fantastic-data-engineering?color=2b9348" alt="License Badge"/></a>
 </div>
-<br>
+<!-- <br>
 <p align="center"><i>Loved the project? Please visit our <a href="https://awesome-github-readme-profile.netlify.app">Website</a></i></p>
 <br>
-This repo aims to collect the all `awesome beautiful READMEs profile` and make your Profile look good & Inspire other's.
+ -->
+<!-- This repo aims to collect the all `awesome beautiful READMEs profile` and make your Profile look good & Inspire other's.
 
-If you are intersted, will create a PR for to add your `README` profile here.
+<!-- If you are intersted, will create a PR for to add your `README` profile here.
 
 If you like this Repo, Please click the :star:
 
-List of `awesome README Profile` categories mentioned below
+List of `awesome README Profile` categories mentioned below --> -->
 
 ## Contents
-  - [Github README PROFILE CATEGORY](#github-readme-profile-category)
+  <!-- - [Github README PROFILE CATEGORY](#github-readme-profile-category)
   - [List out `Awesome README Profile` Tools](#list-out-awesome-readme-profile-tools)
   - [List out `Awesome README Profile` Articles](#list-out-awesome-readme-profile-articles)
-  - [Contribute](#contribute)
+  - [Contribute](#contribute) -->
 
-## Website
+<!-- ## Website -->
+<!-- Link : https://awesome-github-readme-profile.netlify.app
 
-Link : https://awesome-github-readme-profile.netlify.app
-
-<a href="https://awesome-github-readme-profile.netlify.app"><img src="https://raw.githubusercontent.com/yuleiqin/fantastic-data-engineering/master/awesome-github-profile.png" alt="Awesome README Templates" /></a>
+<a href="https://awesome-github-readme-profile.netlify.app"><img src="https://raw.githubusercontent.com/yuleiqin/fantastic-data-engineering/master/awesome-github-profile.png" alt="Awesome README Templates" /></a> -->
 
 
-## Github README PROFILE CATEGORY
-
-- [ ] [Art](art)
+<!-- ## Github README PROFILE CATEGORY -->
+<!-- - [ ] [Art](art)
 - [ ] [Code Styled](code-styled)
 - [ ] [Creativity](creativity)
 - [ ] [Flowcharts](flowcharts)
@@ -44,11 +43,10 @@ Link : https://awesome-github-readme-profile.netlify.app
 - [ ] [Multimedia](multimedia)
 - [ ] [Short-and-sweet](short-and-sweet)
 - [ ] [Tabular](tabular)
-- [ ] [Pie Charts](pie-charts)
+- [ ] [Pie Charts](pie-charts) -->
 
-# List out `Awesome README Profile` Tools
-
-- [Profile Summary For Github](https://profile-summary-for-github.com/search)
+<!-- # List out `Awesome README Profile` Tools -->
+<!-- - [Profile Summary For Github](https://profile-summary-for-github.com/search)
 - [Github Readme Stats](https://github.com/anuraghazra/github-readme-stats) - Dynamically generated stats for your github readmes
 - [Profile Activity Generator](https://github.com/omidnikrah/profile-activity-generator) - Generate custom profile activity for your profile README
 - [All Dev Stats in Readme](https://github.com/anmol098/waka-readme-stats) - Are you an early 🐤 or a night 🦉? When are you most productive during the day? What languages you code in? And other stuff... Let's check out in your readme!
@@ -66,17 +64,17 @@ Link : https://awesome-github-readme-profile.netlify.app
 - [npm package downloads](https://github.com/maddhruv/github-readme-npm-downloads) - Show all of your npm packages and their total downloads
 - [Feedparser](https://pythonhosted.org/feedparser/) - Convenient processing of RSS files
 - [Github Profile README Generator](https://github.com/arturssmirnovs/github-profile-readme-generator) - This project allows you to create nice and simple github profile readme files.
-- [Github Gist Count Generator](https://github.com/lifeparticle/Gist-Count) - Get gist count for your github readmes.
+- [Github Gist Count Generator](https://github.com/lifeparticle/Gist-Count) - Get gist count for your github readmes. -->
 
-# List out `Awesome README Profile` Articles
+<!-- # List out `Awesome README Profile` Articles -->
 
-# Contribute
+<!-- # Contribute
 
-Contributions are always welcome! Please create a PR to add Github Profile.
+Contributions are always welcome! Please create a PR to add Github Profile. -->
 
-## :pencil: License
+<!-- ## :pencil: License
 
-This project is licensed under [MIT](https://opensource.org/licenses/MIT) license.
+This project is licensed under [MIT](https://opensource.org/licenses/MIT) license. -->
 
 ## :man_astronaut: Show your support
 
