@@ -20,7 +20,16 @@ If you like this Repo, Please click the :star:
 
 List of `awesome README Profile` categories mentioned below -->
 
-## Contents
+# Papers
+
+## Dataset Pruning
+
+### LLM Pretraining (Methods, Tricks, Pipelines)
+- [When Less is More: Investigating Data Pruning for Pretraining LLMs at Scale](https://arxiv.org/pdf/2309.04564) - Common indicators for data quality measurement and dataset cleaning
+
+
+
+
   <!-- - [Github README PROFILE CATEGORY](#github-readme-profile-category)
   - [List out `Awesome README Profile` Tools](#list-out-awesome-readme-profile-tools)
   - [List out `Awesome README Profile` Articles](#list-out-awesome-readme-profile-articles)
