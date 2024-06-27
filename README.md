@@ -8,82 +8,44 @@
 <a href="https://github.com/yuleiqin/fantastic-data-engineering/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/yuleiqin/fantastic-data-engineering?color=2b9348"></a>
 <a href="https://github.com/yuleiqin/fantastic-data-engineering/blob/master/LICENSE"><img src="https://img.shields.io/github/license/yuleiqin/fantastic-data-engineering?color=2b9348" alt="License Badge"/></a>
 </div>
-<!-- <br>
-<p align="center"><i>Loved the project? Please visit our <a href="https://awesome-github-readme-profile.netlify.app">Website</a></i></p>
-<br>
- -->
-<!-- This repo aims to collect the all `awesome beautiful READMEs profile` and make your Profile look good & Inspire other's.
 
-<!-- If you are intersted, will create a PR for to add your `README` profile here.
 
-If you like this Repo, Please click the :star:
 
-List of `awesome README Profile` categories mentioned below -->
+# Tools
+## Popular Classifiers in NLP
+- [FastText Classifier](https://arxiv.org/pdf/1607.01759) - Bag of Tricks for Efficient Text Classification (can be used for topic/domain/quality classification).
+
+- [FASTTEXT.ZIP](https://arxiv.org/pdf/1612.03651) - Compressed FastText classification models.
+
 
 # Papers
 
 ## Dataset Pruning
 
 ### LLM Pretraining (Methods, Tricks, Pipelines)
-- [When Less is More: Investigating Data Pruning for Pretraining LLMs at Scale](https://arxiv.org/pdf/2309.04564) - Common indicators for data quality measurement and dataset cleaning
+- [When Less is More: Investigating Data Pruning for Pretraining LLMs at Scale](https://arxiv.org/pdf/2309.04564) - Common indicators (e.g., perplexity, EL2N, memorization ranking) are investigated for data quality measurement and dataset cleaning.
+
+- [Beyond neural scaling laws: beating power law scaling via data pruning](https://proceedings.neurips.cc/paper_files/paper/2022/file/7b75da9b61eda40fa35453ee5d077df6-Paper-Conference.pdf) - Apart from the data measurement metrics, the proportion of pruned data with respect to the model size matters. Keep easy samples from small datasets, and difficult samples from big datasets.
+
+### LLM Instruction Fine-tuning and Aligning
+- [From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning](https://arxiv.org/pdf/2308.12032) - Select 1K samples from each cluster of the fine-tuning datasets and construct "experiencing" models. Evaluate all datapoints using these models via instruction-following difficulty, which is defined as the conditioned answer score/direct answer score. **Choose the datapoints with moderate IFD scores!**
 
 
 
+## Dataset Selection
 
-  <!-- - [Github README PROFILE CATEGORY](#github-readme-profile-category)
-  - [List out `Awesome README Profile` Tools](#list-out-awesome-readme-profile-tools)
-  - [List out `Awesome README Profile` Articles](#list-out-awesome-readme-profile-articles)
-  - [Contribute](#contribute) -->
+### Influence Estimation (Importance of Datapoints)
+- [What Neural Networks Memorize and Why: Discovering the Long Tail via Influence Estimation](https://proceedings.neurips.cc/paper_files/paper/2020/file/1e14bfe2714193e7af5abc64ecbd6b46-Paper.pdf) - The value estimators of memorization and influence help pinpoint the most important datapoints that affect test-time performance significantly.
 
-<!-- ## Website -->
-<!-- Link : https://awesome-github-readme-profile.netlify.app
+- [Deep Learning on a Data Diet: Finding Important Examples Early in Training](https://proceedings.neurips.cc/paper_files/paper/2021/file/ac56f8fe9eea3e4a365f29f0f1957c55-Paper.pdf) - Important samples can be found at an early stage using indicators like forgetting score, gradient norm (GraNd), and Error l2 norm (EL2N). A high ratio of pruning would degrade overall performance due to overfitting of samples with label errors or high difficulty.
 
-<a href="https://awesome-github-readme-profile.netlify.app"><img src="https://raw.githubusercontent.com/yuleiqin/fantastic-data-engineering/master/awesome-github-profile.png" alt="Awesome README Templates" /></a> -->
+### Downstream Metrics and Offline Indicators
+- [Do We Need to Create Big Datasets to Learn a Task?](https://aclanthology.org/2020.sustainlp-1.23.pdf) - Small-yet-important datasets can be efficiently collected simply by iteratively adding sampled subsets from big sets that contribute to downstream metrics. The cost-efficient AFLite filtering strategy, together with pre-defined data quality indicators (DQI), further reduces the size of the chosen datasets.
 
 
-<!-- ## Github README PROFILE CATEGORY -->
-<!-- - [ ] [Art](art)
-- [ ] [Code Styled](code-styled)
-- [ ] [Creativity](creativity)
-- [ ] [Flowcharts](flowcharts)
-- [ ] [Default](default)
-- [ ] [Dynamic Realtime](dynamic-realtime)
-- [ ] [Elaborate](elaborate)
-- [ ] [Multimedia](multimedia)
-- [ ] [Short-and-sweet](short-and-sweet)
-- [ ] [Tabular](tabular)
-- [ ] [Pie Charts](pie-charts) -->
+- [DQI: Measuring Data Quality in NLP](https://arxiv.org/pdf/2008.03964) - The intuitive and manually-designed metrics for evaluating the data quality in NLP include vocabulary, inter-sample N-gram frequency and relation, inter-sample STS, intra-sample word similarity, intra-sample STS, N-Gram Frequency per Label, and Inter-split STS.
 
-<!-- # List out `Awesome README Profile` Tools -->
-<!-- - [Profile Summary For Github](https://profile-summary-for-github.com/search)
-- [Github Readme Stats](https://github.com/anuraghazra/github-readme-stats) - Dynamically generated stats for your github readmes
-- [Profile Activity Generator](https://github.com/omidnikrah/profile-activity-generator) - Generate custom profile activity for your profile README
-- [All Dev Stats in Readme](https://github.com/anmol098/waka-readme-stats) - Are you an early 🐤 or a night 🦉? When are you most productive during the day? What languages you code in? And other stuff... Let's check out in your readme!
-- [Visitor Badge](https://visitor-badge.glitch.me/#docs) - Count visitors for your README.md, Issues, PRs in GitHub
-- [1990s style Visitor Counter](https://twitter.com/ryanlanciaux/status/1283755637126705152) - Add a 1990s style visitor counter with one line of markdown.
-- [Vists Count](https://pufler.dev/git-badges/) - Count visitors for README.md that can be used with shields.io
-- [Shields Project](https://shields.io/) - Use Shields to create profile badges, compatible with Simple Icons
-- [Simple Icons](https://github.com/simple-icons/simple-icons#cdn-usage) - SVG icons for popular brands for your README.md files
-- [Laravel GitHub Profile Visit Counter](https://github.com/caneco/laravel-github-profile-view-counter) - Add on your Laravel project a quick-badge to count your profile visits.
-- [Dev Metrics in Readme](https://github.com/athul/waka-readme) - [WakaTime](https://wakatime.com/) Weekly Metrics on your Profile Readme
-- [Current UTC time](https://github.com/jojoee/jojoee) - Example code of server that can serve dynamic content on GitHub profile
-- [Github Activity in README](https://github.com/jamesgeorge007/github-activity-readme) - Updates `README.md` with the recent GitHub activity of a user
-- [Github Profile README Generator](https://github.com/rahuldkjain/github-profile-readme-generator) - This tool provides an easy way to create github profile readme with latest addons like `visitors count`, `github stats` etc.
-- [Dynamic Profile Page On Github](https://github.com/umutphp/github-action-dynamic-profile-page) - Get dynamically generated list of your commits (of the repositories that the action is configured) on GitHub profile readme.
-- [npm package downloads](https://github.com/maddhruv/github-readme-npm-downloads) - Show all of your npm packages and their total downloads
-- [Feedparser](https://pythonhosted.org/feedparser/) - Convenient processing of RSS files
-- [Github Profile README Generator](https://github.com/arturssmirnovs/github-profile-readme-generator) - This project allows you to create nice and simple github profile readme files.
-- [Github Gist Count Generator](https://github.com/lifeparticle/Gist-Count) - Get gist count for your github readmes. -->
 
-<!-- # List out `Awesome README Profile` Articles -->
-
-<!-- # Contribute
-
-Contributions are always welcome! Please create a PR to add Github Profile. -->
-
-<!-- ## :pencil: License
-
-This project is licensed under [MIT](https://opensource.org/licenses/MIT) license. -->
 
 ## :man_astronaut: Show your support
 
