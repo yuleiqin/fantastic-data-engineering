@@ -78,6 +78,8 @@ Under construction🔥🔥🔥
 
 - [D4: Improving llm pretraining via document de-duplication and diversification](https://proceedings.neurips.cc/paper_files/paper/2023/file/a8f8cbd7f7a5fb2c837e578c75e5b615-Paper-Datasets_and_Benchmarks.pdf) - The pruning of datasets can be simply achieved by SemDeDup (semantic deduplication) and prototypicality filtering. Such dedupped and diversified subsets improve downstreaming performance even with repeating training epochs.
 
+- [QuRating: Selecting High-Quality Data for Training Language Models](https://arxiv.org/pdf/2402.09739) - QuRating defines quality criteria such as writing style, facts and trivia, educational value, and required expertise, and uses GPT-3.5-turbo to judge text pairs to generate labels for training the QuRater model. The fine-tuned QuRater model can then rate the quality of text. Experiments show that the language models trained with data selected by QuRating perform better than those trained with other data selection methods, and different quality criteria have different impacts on model performance, with educational value and required expertise being the most significant.
+
 
 
 ### LLM Instruction Fine-tuning and Aligning🛟
