@@ -80,6 +80,9 @@ Under construction🔥🔥🔥
 
 - [QuRating: Selecting High-Quality Data for Training Language Models](https://arxiv.org/pdf/2402.09739) - QuRating defines quality criteria such as writing style, facts and trivia, educational value, and required expertise, and uses GPT-3.5-turbo to judge text pairs to generate labels for training the QuRater model. The fine-tuned QuRater model can then rate the quality of text. Experiments show that the language models trained with data selected by QuRating perform better than those trained with other data selection methods, and different quality criteria have different impacts on model performance, with educational value and required expertise being the most significant.
 
+- [Data Mixing Laws: Optimizing Data Mixtures by Predicting Language Modeling Performance](https://arxiv.org/pdf/2403.16952) - Discovers the quantitative predictability of model performance regarding data mixtures, and formulates it as the data mixing laws. It proposes a pipeline to predict model performance on different mixture proportions through nested use of the scaling laws of training steps, model sizes, and data mixing laws. 
+
+- [RegMix: Data Mixture as Regression for Language Model Pre-training](https://arxiv.org/abs/2407.01492) - The paper proposes the RegMix method to automatically identify an effective data mixture for language model pre-training by formulating it as a regression task. It involves training small models with diverse data mixtures and fitting a regression model to predict their performance. The top-ranked mixture is then used to train a large-scale model. The experiments show that RegMix is superior to human selection, achieves comparable or better results than DoReMi with only 10% of the compute budget. It also finds that data mixtures significantly impact performance, web corpora have a stronger correlation with downstream performance, domains interact complexly, and the data mixture effects transcend scaling laws. 
 
 
 ### LLM Instruction Fine-tuning and Aligning🛟
@@ -136,7 +139,8 @@ Under construction🔥🔥🔥
 
 - [Data selection for fine-tuning large language models using transferred shapley values](https://arxiv.org/pdf/2306.10165) - Sharply values can be approximated and aggregated to sample datasets, where the lowest scored samples are removed first until the proxy model (A_src) reaches the optimal performance on the validation set. Then, the selected dataset is used to train the target model (A_tgt).
 
-
+- [From Random to Informed Data Selection: A Diversity-Based Approach to Optimize Human Annotation and Few-Shot Learning](https://arxiv.org/pdf/2401.13229) - Proposes an automatic data selection architecture for few-shot learning, including three methods: Reverse Semantic Search (RSS), Ordered Clustering (OC), and Limited Lexical Similarity (LLS).
+Introducing the automatic data selection architecture based on active learning principles to identify the most informative and representative data points for annotation. Conducting an extensive analysis of the architecture's various implementations, highlighting its effectiveness in building the first version of a dataset in the context of low-resource text classification. 
 
 ### Downstream Metrics and Offline Indicators🧪
 - [Do We Need to Create Big Datasets to Learn a Task?](https://aclanthology.org/2020.sustainlp-1.23.pdf) - Small-yet-important datasets can be efficiently collected simply by iteratively adding sampled subsets from big sets that contribute to downstream metrics. The cost-efficient AFLite filtering strategy, together with pre-defined data quality indicators (DQI), further reduces the size of the chosen datasets.
@@ -160,6 +164,9 @@ Under construction🔥🔥🔥
 - [Dele: Data Efficient LLM Evaluation](https://openreview.net/pdf?id=I8bsxPWLNF) - An adaptive effective sampling method can expedite LLM evaluation without losing discriminability of existing benchmarks. The candidate pool of sampling methods include: 1) random sampling; 2) clustering-based sampling (e.g., topic-modeling, DBScan, LDA, k-means, spectral); 3) quality-based sampling (spelling errors, average word-length, count of repeating words, compound probability distribution, lexical diversity); 4) difficulty-based sampling (difficult-words percentage, dale-chall formula, flesh reading ease, gunning fog).
 
 - [Gio: Gradient information optimization for training dataset selection](https://arxiv.org/pdf/2306.11670) - To keep the selected dataset representative, it is feasible to use the KL-divergence as an measure between the sampled dataset and the target dataset (e.g., downstream datasets). Given an embedding model, the selection is performed by minimizing the KL divergence between two distribution where the newly added datapoint is determined by gradient information of the KL divergence.
+
+
+
 
 
 ### Uncertainty❓
