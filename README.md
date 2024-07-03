@@ -42,6 +42,8 @@ Under construction🔥🔥🔥
 
 - [Muffin: Curating multi-faceted instructions for improving instruction following](https://openreview.net/pdf?id=1vrS1zwekw) - Three paradigms for expanding the instruction datasets: 1) scaling inputs; 2) scaling input-free tasks; and 3) scaling tasks per input. To choose appropriate input samples, input contents are selected from different domains with controled similar frequency. The entire scaling pipeline includes facets recognition, instruction brainstorm, instruction rematching, and output annotation.
 
+- [Self-play with Execution Feedback: Improving Instruction-following Capabilities of Large Language Models](https://arxiv.org/pdf/2406.13542) - The two-stage instruction-followng data synthesis method is composed of: 1) instruction augmentation and verification and 2) query augmentation and verification. In the first step, human-verified seed instructions are provided for the supervisor model (e.g., larger powerful LLMs) to perform self-instruct. The augmented instructions are then used to generate their verification python codes and test cases, where only high quality, excutable triplets (test cases, instructions, verification functions) are kept via filtering (e.g., back translation check). In the second step, real-world queries are randomly selected from ShareGPT dataset and concatenated with the generated instructions as **complexity-augmented** instructions. These instructions are scored by a LLM to filter out contradictory ones (e.g., query imcompatible with instruction). Only valid instructions are sent to the supervisory model for response generation and verification. Correct, high quality responses can be used for **supervised fine-tuning** and their invalid counterparts can be employed as negative preferences in **DPO alignment**.
+
 
 ### Evo-Instruct🐛
 
@@ -128,6 +130,9 @@ Under construction🔥🔥🔥
 - [MATES: Model-Aware Data Selection for Efficient Pretraining with Data Influence Models](https://arxiv.org/pdf/2406.06046) - A data influence model (e.g., BERT-base), updating alternatively, continuously adapts to the evolving data preferences of the pretrained model (e.g., Pythia-410M/1B) and selects the most effective datapoints for the current pretraining.
 
 
+- [Data selection for fine-tuning large language models using transferred shapley values](https://arxiv.org/pdf/2306.10165) - Sharply values can be approximated and aggregated to sample datasets, where the lowest scored samples are removed first until the proxy model (A_src) reaches the optimal performance on the validation set. Then, the selected dataset is used to train the target model (A_tgt).
+
+
 
 ### Downstream Metrics and Offline Indicators🧪
 - [Do We Need to Create Big Datasets to Learn a Task?](https://aclanthology.org/2020.sustainlp-1.23.pdf) - Small-yet-important datasets can be efficiently collected simply by iteratively adding sampled subsets from big sets that contribute to downstream metrics. The cost-efficient AFLite filtering strategy, together with pre-defined data quality indicators (DQI), further reduces the size of the chosen datasets.
@@ -151,11 +156,6 @@ Under construction🔥🔥🔥
 - [Dele: Data Efficient LLM Evaluation](https://openreview.net/pdf?id=I8bsxPWLNF) - An adaptive effective sampling method can expedite LLM evaluation without losing discriminability of existing benchmarks. The candidate pool of sampling methods include: 1) random sampling; 2) clustering-based sampling (e.g., topic-modeling, DBScan, LDA, k-means, spectral); 3) quality-based sampling (spelling errors, average word-length, count of repeating words, compound probability distribution, lexical diversity); 4) difficulty-based sampling (difficult-words percentage, dale-chall formula, flesh reading ease, gunning fog).
 
 - [Gio: Gradient information optimization for training dataset selection](https://arxiv.org/pdf/2306.11670) - To keep the selected dataset representative, it is feasible to use the KL-divergence as an measure between the sampled dataset and the target dataset (e.g., downstream datasets). Given an embedding model, the selection is performed by minimizing the KL divergence between two distribution where the newly added datapoint is determined by gradient information of the KL divergence.
-
-
-- [Data selection for fine-tuning large language models using transferred shapley values](https://arxiv.org/pdf/2306.10165) - Sharply values can be approximated and aggregated to sample datasets, where the lowest scored samples are removed first until the proxy model (A_src) reaches the optimal performance on the validation set. Then, the selected dataset is used to train the target model (A_tgt).
-
-
 
 
 ### Uncertainty❓
