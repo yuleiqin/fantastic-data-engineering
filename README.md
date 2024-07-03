@@ -18,6 +18,8 @@ Under construction🔥🔥🔥
 
 - [FASTTEXT.ZIP](https://arxiv.org/pdf/1612.03651) - Compressed FastText classification models.
 
+- [An Open Dataset of High-Quality Mathematical Web Text](https://arxiv.org/abs/2310.06786) - A fastText-based classifier that evaluates the MathScore of any given contents for selection of mathematic corpus.
+
 
 # Papers📑
 
