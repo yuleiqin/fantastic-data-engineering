@@ -80,7 +80,8 @@ Under construction🔥🔥🔥
 
 - [QuRating: Selecting High-Quality Data for Training Language Models](https://arxiv.org/pdf/2402.09739) - QuRating defines quality criteria such as writing style, facts and trivia, educational value, and required expertise, and uses GPT-3.5-turbo to judge text pairs to generate labels for training the QuRater model. The fine-tuned QuRater model can then rate the quality of text. Experiments show that the language models trained with data selected by QuRating perform better than those trained with other data selection methods, and different quality criteria have different impacts on model performance, with educational value and required expertise being the most significant.
 
-- [Data Mixing Laws: Optimizing Data Mixtures by Predicting Language Modeling Performance](https://arxiv.org/pdf/2403.16952) - Discovers the quantitative predictability of model performance regarding data mixtures, and formulates it as the data mixing laws. It proposes a pipeline to predict model performance on different mixture proportions through nested use of the scaling laws of training steps, model sizes, and data mixing laws. 
+- [Data Mixing Laws: Optimizing Data Mixtures by Predicting Language Modeling Performance](https://arxiv.org/pdf/2403.16952) - It discovers the quantitative predictability of model performance regarding data mixtures, and formulates it as the data mixing laws. It proposes a pipeline to predict model performance on different mixture proportions through nested use of the scaling laws of training steps, model sizes, and data mixing laws. 
+
 
 - [RegMix: Data Mixture as Regression for Language Model Pre-training](https://arxiv.org/abs/2407.01492) - The paper proposes the RegMix method to automatically identify an effective data mixture for language model pre-training by formulating it as a regression task. It involves training small models with diverse data mixtures and fitting a regression model to predict their performance. The top-ranked mixture is then used to train a large-scale model. The experiments show that RegMix is superior to human selection, achieves comparable or better results than DoReMi with only 10% of the compute budget. It also finds that data mixtures significantly impact performance, web corpora have a stronger correlation with downstream performance, domains interact complexly, and the data mixture effects transcend scaling laws. 
 
@@ -125,6 +126,11 @@ Under construction🔥🔥🔥
 
 
 ### Influence Estimation (Importance of Datapoints)🏗️
+
+
+- [LESS: Selecting Influential Data for Targeted Instruction Tuning](https://arxiv.org/pdf/2402.04333) - The targeted instruction tuning aims at finding the most influential data that improves the downstreaming performance of LLMs, where low-rank gradient similarity search is developed to efficiently pinpoint the training examples that resemble the few-shot testing cases. Specifically, for each dataset, the base model is warmed-up by experiencing a small portion of samples for more accurate, stable estimation of gradients. Then, the gradient-based trajectory influence estimation is extended to work with Adam optimizer. The LoRA technique, together with random projection, is involved to efficiently compute and store the gradient. Finally, the average gradient of testing cases over epochs is computed for similarity measurement with respect to the gradients of each training case, where those top-ranked samples are the most influential ones.
+
+
 - [What Neural Networks Memorize and Why: Discovering the Long Tail via Influence Estimation](https://proceedings.neurips.cc/paper_files/paper/2020/file/1e14bfe2714193e7af5abc64ecbd6b46-Paper.pdf) - The value estimators of memorization and influence help pinpoint the most important datapoints that affect test-time performance significantly.
 
 - [Deep Learning on a Data Diet: Finding Important Examples Early in Training](https://proceedings.neurips.cc/paper_files/paper/2021/file/ac56f8fe9eea3e4a365f29f0f1957c55-Paper.pdf) - Important samples can be found at an early stage using indicators like forgetting score, gradient norm (GraNd), and Error l2 norm (EL2N). A high ratio of pruning would degrade overall performance due to overfitting of samples with label errors or high difficulty.
