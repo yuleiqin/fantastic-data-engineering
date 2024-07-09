@@ -80,11 +80,6 @@ Under construction🔥🔥🔥
 
 - [QuRating: Selecting High-Quality Data for Training Language Models](https://arxiv.org/pdf/2402.09739) - QuRating defines quality criteria such as writing style, facts and trivia, educational value, and required expertise, and uses GPT-3.5-turbo to judge text pairs to generate labels for training the QuRater model. The fine-tuned QuRater model can then rate the quality of text. Experiments show that the language models trained with data selected by QuRating perform better than those trained with other data selection methods, and different quality criteria have different impacts on model performance, with educational value and required expertise being the most significant.
 
-- [Data Mixing Laws: Optimizing Data Mixtures by Predicting Language Modeling Performance](https://arxiv.org/pdf/2403.16952) - It discovers the quantitative predictability of model performance regarding data mixtures, and formulates it as the data mixing laws. It proposes a pipeline to predict model performance on different mixture proportions through nested use of the scaling laws of training steps, model sizes, and data mixing laws. 
-
-
-- [RegMix: Data Mixture as Regression for Language Model Pre-training](https://arxiv.org/abs/2407.01492) - The paper proposes the RegMix method to automatically identify an effective data mixture for language model pre-training by formulating it as a regression task. It involves training small models with diverse data mixtures and fitting a regression model to predict their performance. The top-ranked mixture is then used to train a large-scale model. The experiments show that RegMix is superior to human selection, achieves comparable or better results than DoReMi with only 10% of the compute budget. It also finds that data mixtures significantly impact performance, web corpora have a stronger correlation with downstream performance, domains interact complexly, and the data mixture effects transcend scaling laws. 
-
 
 ### LLM Instruction Fine-tuning and Aligning🛟
 - [From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning](https://arxiv.org/pdf/2308.12032) - Select 1K samples from each cluster of the fine-tuning datasets and construct "experiencing" models. Evaluate all datapoints using these models via instruction-following difficulty, which is defined as the conditioned answer score/direct answer score. **Choose the datapoints with moderate IFD scores!**
@@ -112,6 +107,21 @@ Under construction🔥🔥🔥
 
 
 - [What makes good data for alignment? a comprehensive study of automatic data selection in instruction tuning](https://arxiv.org/pdf/2312.15685) - Datasets can be measured from three dimensions: complexity, quality, and diversity. A dataset is obtained by first performing **evolution on instruction complexity and response quality** of datasets via Evo-Instruct, respectively on each sample and rank these variants from high to low. Subsequently, diversity is considered where newly added samples should share low similarity with the existing dataset.
+
+
+## Dataset Mixture🥄
+
+- [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](https://arxiv.org/abs/2112.06905) - The mixture weights of datasets from different domains are set according to the performance of a small model trained independently on each component dataset. Small-yet-high-quality datasets such as Wikipedia are not over-sampled.
+
+- [SlimPajama-DC: Understanding Data Combinations for LLM Training](https://arxiv.org/abs/2309.10818) - The proportions of different domains in the deduplicated SlimPajama/RefinedWeb dataset are studied with 7 different configurations where their total number of tokens remains the same. The results of 7 configurations in terms of both downstream metrics and losses suggests appropriate weights for datasets from different sources.
+
+
+- [Data Mixing Laws: Optimizing Data Mixtures by Predicting Language Modeling Performance](https://arxiv.org/pdf/2403.16952) - It discovers the quantitative predictability of model performance regarding data mixtures, and formulates it as the data mixing laws. It proposes a pipeline to predict model performance on different mixture proportions through nested use of the scaling laws of training steps, model sizes, and data mixing laws. 
+
+
+- [RegMix: Data Mixture as Regression for Language Model Pre-training](https://arxiv.org/abs/2407.01492) - The paper proposes the RegMix method to automatically identify an effective data mixture for language model pre-training by formulating it as a regression task. It involves training small models with diverse data mixtures and fitting a regression model to predict their performance. The top-ranked mixture is then used to train a large-scale model. The experiments show that RegMix is superior to human selection, achieves comparable or better results than DoReMi with only 10% of the compute budget. It also finds that data mixtures significantly impact performance, web corpora have a stronger correlation with downstream performance, domains interact complexly, and the data mixture effects transcend scaling laws. 
+
+- [Data Mixing Made Efficient: A Bivariate Scaling Law for Language Model Pretraining](https://arxiv.org/pdf/2405.14908) - BiMix adopts the bivariate scaling law to reveal the impact of data quantity and mixing proportions using entropy proxies. The scaling behavior is disentangled into two dimensions: 1) scaling step with fixed proportions, and 2) scaling proportion at fixed steps.
 
 
 
