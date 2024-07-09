@@ -53,6 +53,9 @@ Under construction🔥🔥🔥
 
 - [Tree-Instruct: A Preliminary Study of the Intrinsic Relationship between Complexity and Alignment](https://aclanthology.org/2024.lrec-main.1460.pdf) - The **complexity** of instructions can be represented as the number and diversity of nodes of their semantic trees. Therefore, the pipeline of improving instruction complexity includes: 1) tree construction; 2) nodes expansion; and 3) tree sentencization (remapping from tree to instruction).
 
+- [Infiniy Instruct](https://github.com/FlagOpen/Infinity-Instruct) - The infinity instruct method first collects high-quality open instruction datasets and perform filtering and tagging to give detailed description about each instruction (e.g., domain, knowledge prerequisite, abilities, fine-grained categories). Based on these attributes, high-quality instructions are chosen as seeds for expansion via Evo-Instruct. Finally,
+for each evolved instruction, multi-rounds conversations are generated.
+
 
 ## Dataset Pruning✂️
 
@@ -109,9 +112,14 @@ Under construction🔥🔥🔥
 - [What makes good data for alignment? a comprehensive study of automatic data selection in instruction tuning](https://arxiv.org/pdf/2312.15685) - Datasets can be measured from three dimensions: complexity, quality, and diversity. A dataset is obtained by first performing **evolution on instruction complexity and response quality** of datasets via Evo-Instruct, respectively on each sample and rank these variants from high to low. Subsequently, diversity is considered where newly added samples should share low similarity with the existing dataset.
 
 
+- [Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning](https://arxiv.org/pdf/2402.00530) - A small model (GPT2-125m) can be used to filter instruction-tuningdatasets for training a much larger and stronger model. Specifically, the perplexity and IFD scores of a datapoint from small language models are highly correlated with those from a LLM. Samples with top-k IFD scores (IFD score<1) are chosen for dataset reduction.
+
+
+
 ## Dataset Mixture🥄
 
 - [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](https://arxiv.org/abs/2112.06905) - The mixture weights of datasets from different domains are set according to the performance of a small model trained independently on each component dataset. Small-yet-high-quality datasets such as Wikipedia are not over-sampled.
+
 
 - [SlimPajama-DC: Understanding Data Combinations for LLM Training](https://arxiv.org/abs/2309.10818) - The proportions of different domains in the deduplicated SlimPajama/RefinedWeb dataset are studied with 7 different configurations where their total number of tokens remains the same. The results of 7 configurations in terms of both downstream metrics and losses suggests appropriate weights for datasets from different sources.
 
@@ -182,7 +190,7 @@ Introducing the automatic data selection architecture based on active learning p
 - [Gio: Gradient information optimization for training dataset selection](https://arxiv.org/pdf/2306.11670) - To keep the selected dataset representative, it is feasible to use the KL-divergence as an measure between the sampled dataset and the target dataset (e.g., downstream datasets). Given an embedding model, the selection is performed by minimizing the KL divergence between two distribution where the newly added datapoint is determined by gradient information of the KL divergence.
 
 
-
+- [Data-Efficient Learning via Clustering-Based Sensitivity Sampling: Foundation Models and Beyond](https://arxiv.org/pdf/2402.17327) - A new data selection approach based on k-means clustering and sensitivity sampling can be applied for fine-tuning foundation models.
 
 
 ### Uncertainty❓
