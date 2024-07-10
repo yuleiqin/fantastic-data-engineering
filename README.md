@@ -132,6 +132,8 @@ for each evolved instruction, multi-rounds conversations are generated.
 - [Data Mixing Made Efficient: A Bivariate Scaling Law for Language Model Pretraining](https://arxiv.org/pdf/2405.14908) - BiMix adopts the bivariate scaling law to reveal the impact of data quantity and mixing proportions using entropy proxies. The scaling behavior is disentangled into two dimensions: 1) scaling step with fixed proportions, and 2) scaling proportion at fixed steps.
 
 
+- [How Abilities in Large Language Models are Affected by Supervised Fine-tuning Data Composition](https://arxiv.org/pdf/2310.05492) - Different skills require different strategies of supervised fine-tuning. Sequential training results in catastrophic forgetting and the proposed dual-stage mixed fine-tuning strategy alleviates such forgetting and keeps the general capabilities simultaneously. Specifically, the specialized domain datasets are trained in the first stage and then mixed with general datasets for fine-tuning in the second stage.
+
 
 ## Dataset Selection☑️
 
