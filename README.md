@@ -57,6 +57,24 @@ Under construction🔥🔥🔥
 for each evolved instruction, multi-rounds conversations are generated.
 
 
+## Dataset Deduplication🦄
+
+### Exact Match🟰
+
+- [URL normalization for de-duplication of web pages](https://dl.acm.org/doi/10.1145/1645953.1646283) - URL removel for efficient data-deduplication.
+
+- [CCNet: Extracting high quality monolingual datasets from web crawl data](https://arxiv.org/pdf/1911.00359) - Hash code of each document is calculated and compared for deduplication.
+
+- [Asynchronous pipeline for processing huge corpora on medium to low resource infrastructures](https://inria.hal.science/hal-02148693/file/Asynchronous_Pipeline_for_Processing_Huge_Corpora_on_Medium_to_Low_Resource_Infrastructures.pdf) - A non-collision resistant hashing algorithm isdeveloped to remove duplidates.
+
+- [MinHash](http://www.misserpirat.dk/main/docs/00000004.pdf) [MinHashLSH](https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf) [SimHash](https://dl.acm.org/doi/pdf/10.1145/509907.509965) - Efficient approximation methods of the hashing algorithm are devloped to handle massive corpora.
+
+
+### Semantics🔤
+
+- [Semdedup: Data-efficient learning at web-scale through semantic deduplication](https://arxiv.org/pdf/2303.09540) - The removal of redundant data pairs that are semantically similar but not identical can speed up training but also preserve performance.
+
+
 ## Dataset Pruning✂️
 
 ### LLM Pretraining (Methods, Tricks, Pipelines)🏋️
