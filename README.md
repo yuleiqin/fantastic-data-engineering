@@ -79,9 +79,6 @@ for each evolved instruction, multi-rounds conversations are generated.
 
 ### LLM Pretraining (Methods, Tricks, Pipelines)🏋️
 
-- [Doremi: Optimizing data mixtures speeds up language model pretraining](https://proceedings.neurips.cc/paper_files/paper/2023/file/dcba6be91359358c2355cd920da3fcbd-Paper-Conference.pdf) - The mixture of datasets across diverse domains can be determined by a small proxy model (e.g., 280M params) using group distributionally robust optimization. The weights of datasets are used for resampling the pretrained datasets for training a much larger model (e.g., 8B) with lower perplexity across all domains.
-
-
 - [When Less is More: Investigating Data Pruning for Pretraining LLMs at Scale](https://arxiv.org/pdf/2309.04564) - Common indicators (e.g., perplexity, EL2N, memorization ranking) are investigated for data quality measurement and dataset cleaning.
 
 - [Beyond neural scaling laws: beating power law scaling via data pruning](https://proceedings.neurips.cc/paper_files/paper/2022/file/7b75da9b61eda40fa35453ee5d077df6-Paper-Conference.pdf) - Apart from the data measurement metrics, the proportion of pruned data with respect to the model size matters. Keep easy samples from small datasets, and difficult samples from big datasets.
@@ -151,6 +148,9 @@ for each evolved instruction, multi-rounds conversations are generated.
 
 
 - [How Abilities in Large Language Models are Affected by Supervised Fine-tuning Data Composition](https://arxiv.org/pdf/2310.05492) - Different skills require different strategies of supervised fine-tuning. Sequential training results in catastrophic forgetting and the proposed dual-stage mixed fine-tuning strategy alleviates such forgetting and keeps the general capabilities simultaneously. Specifically, the specialized domain datasets are trained in the first stage and then mixed with general datasets for fine-tuning in the second stage.
+
+
+- [Doremi: Optimizing data mixtures speeds up language model pretraining](https://proceedings.neurips.cc/paper_files/paper/2023/file/dcba6be91359358c2355cd920da3fcbd-Paper-Conference.pdf) - The mixture of datasets across diverse domains can be determined by a small proxy model (e.g., 280M params) using group distributionally robust optimization. The weights of datasets are used for resampling the pretrained datasets for training a much larger model (e.g., 8B) with lower perplexity across all domains.
 
 
 ## Dataset Selection☑️
