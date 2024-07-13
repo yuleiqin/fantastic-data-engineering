@@ -189,6 +189,10 @@ Introducing the automatic data selection architecture based on active learning p
 ### Downstream Metrics and Offline Indicators🧪
 - [Do We Need to Create Big Datasets to Learn a Task?](https://aclanthology.org/2020.sustainlp-1.23.pdf) - Small-yet-important datasets can be efficiently collected simply by iteratively adding sampled subsets from big sets that contribute to downstream metrics. The cost-efficient AFLite filtering strategy, together with pre-defined data quality indicators (DQI), further reduces the size of the chosen datasets.
 
+
+- [Data quality in NLP: Metrics and a comprehensive taxonomy](https://link.springer.com/chapter/10.1007/978-3-031-58547-0_18) - The comprehensive taxonomy for data quality in NLP is reviewed in terms of linguistic, semantic, anomaly, diversity, and classifier performance.
+
+
 - [WinoGrande: An Adversarial Winograd Schema Challenge at Scale](https://arxiv.org/pdf/1907.10641) - For filtering out low-quality datapoints, it is feasible to evaluate their predictability scores (namely the number of times that one datapoint is correctly classified / the number of total testing times) and choose the top ranked datapoints. Step 1. Pre-compute representation embeddings for all datapoints. Step 2. Randomly partition datasets into training and validation splits and train proxy models (e.g., linear classifier) on the training set. Step 3. Evaluate the testing set. Step 4. Iterate from Step 2 to Step 3 until a pre-defined number of testing times is reached. Step 5. Calculate the predictability scores and choose the top-ranked, thresholded datapoints. Step 6. Iterate from Step 2. to Step 5. until the data quota is met.
 
 - [Adversarial Filters of Dataset Biases](https://arxiv.org/pdf/2002.04108) - The AFLite aims at reducing the spurious bias of dataset and therefore improves model generalization on OOD samples.
