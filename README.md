@@ -99,6 +99,11 @@ for each evolved instruction, multi-rounds conversations are generated.
 - [QuRating: Selecting High-Quality Data for Training Language Models](https://arxiv.org/pdf/2402.09739) - QuRating defines quality criteria such as writing style, facts and trivia, educational value, and required expertise, and uses GPT-3.5-turbo to judge text pairs to generate labels for training the QuRater model. The fine-tuned QuRater model can then rate the quality of text. Experiments show that the language models trained with data selected by QuRating perform better than those trained with other data selection methods, and different quality criteria have different impacts on model performance, with educational value and required expertise being the most significant.
 
 
+- [Do NLP and machine learning improve traditional readability formulas?](https://aclanthology.org/W12-2207.pdf) - The investigation of NLP-enabled features and machine learning techniques benefits the development of readability metrics.
+Both these "non-classic" and classific readability formulas can be combined for better performance of readability measures.
+
+
+
 ### LLM Instruction Fine-tuning and Aligning🛟
 - [From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning](https://arxiv.org/pdf/2308.12032) - Select 1K samples from each cluster of the fine-tuning datasets and construct "experiencing" models. Evaluate all datapoints using these models via instruction-following difficulty, which is defined as the conditioned answer score/direct answer score. **Choose the datapoints with moderate IFD scores!**
 
