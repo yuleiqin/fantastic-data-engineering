@@ -11,7 +11,7 @@
 
 This is a repository to help all readers who are interested in the data assessment and selection methods for Instruction Tuning of LLMs.
 
-If your papers are missing or you have other requests, please contact to yuleichin@126.com.</br>
+If your papers are missing or you have other requests, please contact to yuleichin@126.com.
 We will update this repository and paper on a regular basis to maintain up-to-date. 
 
 
@@ -70,7 +70,7 @@ Comprehensive Data Assessment and Selection
 ## B. [Diversity-based Selection](#content)
 
 
-## C. [Importance-based Selection](#content)
+
 
 
 ## Surveys📝
@@ -154,6 +154,8 @@ for each evolved instruction, multi-rounds conversations are generated.
 - [Do NLP and machine learning improve traditional readability formulas?](https://aclanthology.org/W12-2207.pdf) - The investigation of NLP-enabled features and machine learning techniques benefits the development of readability metrics.
 Both these "non-classic" and classific readability formulas can be combined for better performance of readability measures.
 
+
+## C. [Importance-based Selection](#content)
 
 
 ### LLM Instruction Fine-tuning and Aligning🛟
