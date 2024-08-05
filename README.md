@@ -1,5 +1,5 @@
-<h1 align="center">Fantastic Data Engineering for Large Language Models</h1>
-<p align="center"><i>Unleashing the Power of Data Tsunami: A Comprehensive Survey on Data Assessment and Selection for Instruction Tuning of Language Models</i></p>
+<h1 align="center">🌊Unleashing the Power of Data Tsunami: A Comprehensive Survey on Data Assessment and Selection for Instruction Tuning of Language Models</h1>
+<p align="center"><i>Fantastic Data Engineering for Large Language Models</i></p>
 <div align="center">
   <a href="https://github.com/yuleiqin/fantastic-data-engineering/stargazers"><img src="https://img.shields.io/github/stars/yuleiqin/fantastic-data-engineering" alt="Stars Badge"/></a>
 <a href="https://github.com/yuleiqin/fantastic-data-engineering/network/members"><img src="https://img.shields.io/github/forks/yuleiqin/fantastic-data-engineering" alt="Forks Badge"/></a>
@@ -20,16 +20,31 @@ We will update this repository and paper on a regular basis to maintain up-to-da
 * **`Aug. 2024`:** 🔥🔥🔥**Come and check out our survey paper for the latest updates on data evaluation and selection!** [[arxiv version](https://arxiv.org/submit/5773530)]
 
 
-# Tools🛠️
-## Popular Classifiers in NLP📊
-- [FastText Classifier](https://arxiv.org/pdf/1607.01759) - Bag of Tricks for Efficient Text Classification (can be used for topic/domain/quality classification).
+# Citation🎓
+<!-- ```
+@article{,
+  title={},
+  author={},
+  journal={},
+  year={2024}}
+``` -->
 
-- [FASTTEXT.ZIP](https://arxiv.org/pdf/1612.03651) - Compressed FastText classification models.
-
-- [An Open Dataset of High-Quality Mathematical Web Text](https://arxiv.org/abs/2310.06786) - A fastText-based classifier that evaluates the MathScore of any given contents for selection of mathematic corpus.
 
 
 # Papers📑
+
+## Overview
+
+We present a unified organization of existing researches and categorize them in terms of the dimensionality of data assessment and selection.
+
+![Categorization of data assessment and selection methods for efficient LLM instruction tuning.](./images/survey_illustration.png)
+
+### List of papers with Categorization
+
+All Papers are sorted chronologically according to three categories above, so that you can find related papers more quickly.
+
+
+
 
 ## Surveys📝
 
@@ -41,6 +56,8 @@ We will update this repository and paper on a regular basis to maintain up-to-da
 
 
 - [Deepcore: A comprehensive library for coreset selection in deep learning](https://arxiv.org/pdf/2204.08499) - Task-agnostic data sampling (coreset selection) methods include: 1) geometry-based methods (e.g., herding, kcenter-greedy); 2) uncertainty-based methods (e.g., least confidence/entropy/margin); 3) error/loss-based methods (forgetting; GraND/EL2N; importance resampling); 4) decision boundary-based (adversarial deepfool; contrastive active learning); 5) gradient matching-based (gradient approximation towards full set); 6) bi-level optimization-based (inner loop of model optimization and outer loop of datapoint selection); 7) sub-modularity-based (e.g., graph cut; facility location); 8) proxy-based (preference of a small model on data selection).
+
+
 
 
 
@@ -235,6 +252,19 @@ Introducing the automatic data selection architecture based on active learning p
 - [Quantifying uncertainty in answers from any language model and enhancing their trustworthiness](https://arxiv.org/pdf/2308.16175) - The pipeline of BSDetector uses both self-consistency and direct scoring to estimate the confidence of a LLM on any given instruction triplet (instruction, content, answer).
 
 - [An Experimental Design Framework for Label-Efficient Supervised Finetuning of Large Language Models](https://arxiv.org/pdf/2401.06692) - The selection of datapoints (e.g., prompts) for supervised-finetuning can be mainly categorized as: 1) uncertainty-based selection; 2) k-center selection (e.g., k-center greedy); and 3) submodular selection (maximized diversity). Specifically, uncertainty metrics are defined as: 1) mean entropy; 2) least confidence; 3) mean margin; 4) min margin.
+
+
+
+
+
+# Tools🛠️
+## Popular Classifiers in NLP📊
+- [FastText Classifier](https://arxiv.org/pdf/1607.01759) - Bag of Tricks for Efficient Text Classification (can be used for topic/domain/quality classification).
+
+- [FASTTEXT.ZIP](https://arxiv.org/pdf/1612.03651) - Compressed FastText classification models.
+
+- [An Open Dataset of High-Quality Mathematical Web Text](https://arxiv.org/abs/2310.06786) - A fastText-based classifier that evaluates the MathScore of any given contents for selection of mathematic corpus.
+
 
 
 
