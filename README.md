@@ -64,13 +64,16 @@ Comprehensive Data Assessment and Selection
 ```
 
 
+<a name="A"></a>
 ## A. [Quality-based Selection](#content)
 
 
+<a name="B"></a>
 ## B. [Diversity-based Selection](#content)
 
 
-
+<a name="C"></a>
+## C. [Importance-based Selection](#content)
 
 
 ## Surveys📝
@@ -155,7 +158,7 @@ for each evolved instruction, multi-rounds conversations are generated.
 Both these "non-classic" and classific readability formulas can be combined for better performance of readability measures.
 
 
-## C. [Importance-based Selection](#content)
+
 
 
 ### LLM Instruction Fine-tuning and Aligning🛟
