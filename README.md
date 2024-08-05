@@ -1,5 +1,5 @@
 <h1 align="center">Fantastic Data Engineering for Large Language Models</h1>
-<p align="center"><i>A collection of data engineering methods for pretraining and aligning large language models.</i></p>
+<p align="center"><i>Unleashing the Power of Data Tsunami: A Comprehensive Survey on Data Assessment and Selection for Instruction Tuning of Language Models</i></p>
 <div align="center">
   <a href="https://github.com/yuleiqin/fantastic-data-engineering/stargazers"><img src="https://img.shields.io/github/stars/yuleiqin/fantastic-data-engineering" alt="Stars Badge"/></a>
 <a href="https://github.com/yuleiqin/fantastic-data-engineering/network/members"><img src="https://img.shields.io/github/forks/yuleiqin/fantastic-data-engineering" alt="Forks Badge"/></a>
@@ -9,8 +9,16 @@
 <a href="https://github.com/yuleiqin/fantastic-data-engineering/blob/master/LICENSE"><img src="https://img.shields.io/github/license/yuleiqin/fantastic-data-engineering?color=2b9348" alt="License Badge"/></a>
 </div>
 
+This is a repository to help all readers who are interested in the data assessment and selection methods for Instruction Tuning of LLMs.
+
+If your papers are missing or you have other requests, please contact to yuleichin@126.com.</br>
+We will update this repository and paper on a regular basis to maintain up-to-date. 
+
+
+
 # News📰
-Under construction🔥🔥🔥
+* **`Aug. 2024`:** 🔥🔥🔥**Come and check out our survey paper for the latest updates on data evaluation and selection!** [[arxiv version](https://arxiv.org/submit/5773530)]
+
 
 # Tools🛠️
 ## Popular Classifiers in NLP📊
