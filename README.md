@@ -43,7 +43,34 @@ We present a unified organization of existing researches and categorize them in 
 
 All Papers are sorted chronologically according to three categories above, so that you can find related papers more quickly.
 
+**[Index:** [Quality-based Selection](#A), [Diversity-based Selection](#B), [Importance-based Selection](#C)**]**
+```
+Comprehensive Data Assessment and Selection
+|--- A. Quality-based Selection
+     |--- A.1. Hand-crafted Indicators: Vocabulary; Linguistics; Lexical and Semantic Analysis.
+     |--- A.2. Model-based Indicators: Perplexity; Learning Complexity; Reward Score; Error Norm; Memorization; Instruction Following Difficulty; Predictability; Uncertainty.
+     |--- A.3. GPT Score: Direct Scoring; Pairwise Ranking; Justification.
+     |--- A.4. Human Evaluation: Instruction and Response Annotation; Direct Scoring; Pairwise Ranking.
+|--- B. Diversity-based Selection
+     |--- B.1. Hand-crafted Indicators: Lexical and Semantic Diversity; Statistics.
+     |--- B.2. Model-based Indicators: Entropy; Simpson's Index; Vendi Score; Fisher Information Matrix; Tagging.
+     |--- B.3. Geometry-based Coreset Sampling: __K__-center Greedy; Herding; Clustering.
+     |--- B.4. Bilevel Optimization-based Coreset Sampling: Retrieve; Glister; Consistency Regularization; Entropy Regularization; Refined Minimal Size.
+|--- C. Importance-based Selection
+     |--- C.1. Hand-crafted Indicators: Readability Indices; Education-level Difficulty.
+     |--- C.2. Model-based Indicators: Uncertainty; Reward Score; Datamodels.
+     |--- C.3. Loss and Error-based Coreset Sampling: Forgetting; Memorization; Influence by Loss.
+     |--- C.4. Gradient-based Coreset Sampling: Gradient Matching; Influence by Gradient.
+```
 
+
+## A. [Quality-based Selection](#content)
+
+
+## B. [Diversity-based Selection](#content)
+
+
+## C. [Importance-based Selection](#content)
 
 
 ## Surveys📝
