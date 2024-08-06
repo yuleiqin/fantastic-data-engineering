@@ -11,7 +11,7 @@
 
 This is a repository to help all readers who are interested in the data assessment and selection methods for Instruction Tuning of LLMs.
 
-If your papers are missing or you have other requests, please contact to yuleichin@126.com.
+Most recent studies in 2023 and 2024 are investigated under the present survey. If your papers are missing or you have other requests, please contact to yuleichin@126.com.
 We will update this repository and paper on a regular basis to maintain up-to-date. 
 
 
@@ -36,6 +36,7 @@ We will update this repository and paper on a regular basis to maintain up-to-da
 ## Overview📊
 
 We present a unified organization of existing researches and categorize them in terms of the dimensionality of data assessment and selection.
+
 
 ![Categorization of data assessment and selection methods for efficient LLM instruction tuning.](./images/survey_illustration.png)
 
