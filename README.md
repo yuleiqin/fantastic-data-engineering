@@ -39,7 +39,7 @@ We present a unified organization of existing researches and categorize them in 
 
 ![Categorization of data assessment and selection methods for efficient LLM instruction tuning.](./images/survey_illustration.png)
 
-### List of papers with Categorization
+### List of papers with Categorization✂️
 
 All Papers are sorted chronologically according to three categories above, so that you can find related papers more quickly.
 
@@ -67,13 +67,99 @@ Comprehensive Data Assessment and Selection
 <a name="A"></a>
 ## A. [Quality-based Selection](#content)
 
+#### A.1 Hand-crafted Indicators
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
+
+
+#### A.2 Model-based Indicators
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
+- [From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning](https://arxiv.org/pdf/2308.12032) - Select 1K samples from each cluster of the fine-tuning datasets and construct "experiencing" models. Evaluate all datapoints using these models via instruction-following difficulty, which is defined as the conditioned answer score/direct answer score. **Choose the datapoints with moderate IFD scores!**
+
+
+
+
+#### A.3. GPT Score
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
+
+
+#### A.4. Human Evaluation
+
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
+
 
 <a name="B"></a>
 ## B. [Diversity-based Selection](#content)
 
+#### B.1. Hand-crafted Indicators
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
+
+
+#### B.2. Model-based Indicators
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
+
+
+#### B.3. Geometry-based Coreset Sampling
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
+
+
+#### B.4. Bilevel Optimization-based Coreset Sampling
+
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
+
 
 <a name="C"></a>
 ## C. [Importance-based Selection](#content)
+
+
+#### C.1. Hand-crafted Indicators
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
+
+
+#### C.2. Model-based Indicators
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
+
+#### C.3. Loss and Error-based Coreset Sampling
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
+
+
+#### C.4. Gradient-based Coreset Sampling
+
+| Year   |  Title      |  Summary  | 
+| :----: | :--------: |:----------------:|
+
 
 
 ## Surveys📝
@@ -86,9 +172,6 @@ Comprehensive Data Assessment and Selection
 
 
 - [Deepcore: A comprehensive library for coreset selection in deep learning](https://arxiv.org/pdf/2204.08499) - Task-agnostic data sampling (coreset selection) methods include: 1) geometry-based methods (e.g., herding, kcenter-greedy); 2) uncertainty-based methods (e.g., least confidence/entropy/margin); 3) error/loss-based methods (forgetting; GraND/EL2N; importance resampling); 4) decision boundary-based (adversarial deepfool; contrastive active learning); 5) gradient matching-based (gradient approximation towards full set); 6) bi-level optimization-based (inner loop of model optimization and outer loop of datapoint selection); 7) sub-modularity-based (e.g., graph cut; facility location); 8) proxy-based (preference of a small model on data selection).
-
-
-
 
 
 ## Dataset Construction and Synthesis🚧
@@ -110,6 +193,7 @@ Comprehensive Data Assessment and Selection
 
 - [Infiniy Instruct](https://github.com/FlagOpen/Infinity-Instruct) - The infinity instruct method first collects high-quality open instruction datasets and perform filtering and tagging to give detailed description about each instruction (e.g., domain, knowledge prerequisite, abilities, fine-grained categories). Based on these attributes, high-quality instructions are chosen as seeds for expansion via Evo-Instruct. Finally,
 for each evolved instruction, multi-rounds conversations are generated.
+
 
 
 ## Dataset Deduplication🦄
@@ -162,7 +246,7 @@ Both these "non-classic" and classific readability formulas can be combined for 
 
 
 ### LLM Instruction Fine-tuning and Aligning🛟
-- [From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning](https://arxiv.org/pdf/2308.12032) - Select 1K samples from each cluster of the fine-tuning datasets and construct "experiencing" models. Evaluate all datapoints using these models via instruction-following difficulty, which is defined as the conditioned answer score/direct answer score. **Choose the datapoints with moderate IFD scores!**
+
 
 - [Alpagasus: Training a better alpaca with fewer data](https://arxiv.org/pdf/2307.08701) - It is surprisingly easy and effective to employ strongger models (e.g., GPT3.5, GPT4) to directly score datapoints in terms of helpfulness and accuracy. **Note that coding datasets might not be fairly scored due to their nature.**
 
