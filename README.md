@@ -78,9 +78,10 @@ Comprehensive Data Assessment and Selection
 
 | Year   |  Title      |  Summary  | 
 | :----: | :--------: |:----------------:|
-
-- [From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning](https://arxiv.org/pdf/2308.12032) - Select 1K samples from each cluster of the fine-tuning datasets and construct "experiencing" models. Evaluate all datapoints using these models via instruction-following difficulty, which is defined as the conditioned answer score/direct answer score. **Choose the datapoints with moderate IFD scores!**
-
+| 2023 | [Instruction mining: High-quality instruction data selection for large language models](https://arxiv.org/pdf/2307.06290) | The loss of the base model on dev and test sets can be viewed as a proxy for measuring the quality of datasets. To avoid the high-cost of retraining and evaluation of base models, one efficient way is to directly estimate the loss of the model for each datapoint based on linear regression with quality indicators (e.g., input length, output length, reward score, perplexity, MTLD, KNN-i, and uni-eval metrics). |
+| 2023 | [From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning](https://arxiv.org/pdf/2308.12032) | Select 1K samples from each cluster of the fine-tuning datasets and construct "experiencing" models. Evaluate all datapoints using these models via instruction-following difficulty, which is defined as the conditioned answer score/direct answer score. **Choose the datapoints with moderate IFD scores!** |
+| 2024 | [An Experimental Design Framework for Label-Efficient Supervised Finetuning of Large Language Models](https://arxiv.org/pdf/2401.06692) | The selection of datapoints (e.g., prompts) for supervised-finetuning can be mainly categorized as: 1) uncertainty-based selection; 2) k-center selection (e.g., k-center greedy); and 3) submodular selection (maximized diversity). Specifically, uncertainty metrics are defined as: 1) mean entropy; 2) least confidence; 3) mean margin; 4) min margin. |
+| 2024 | [Perplexed by Perplexity: Perplexity-Based Data Pruning With Small Reference Models](https://arxiv.org/pdf/2405.20541) | The perplexity of datapoints inferred from a small reference model can be used to prune datasets for training LLMs. Medium and High perplexity selected (via frequency) datapoints are the most beneficial ones. However, the **marginal utility** diminishes when more data (e.g., over the requisite by scaling laws) are involved or more training epochs are repeated. |
 
 
 
@@ -88,6 +89,13 @@ Comprehensive Data Assessment and Selection
 
 | Year   |  Title      |  Summary  | 
 | :----: | :--------: |:----------------:|
+| 2023 | [Alpagasus: Training a better alpaca with fewer data](https://arxiv.org/pdf/2307.08701) | It is surprisingly easy and effective to employ strongger models (e.g., GPT3.5, GPT4) to directly score datapoints in terms of helpfulness and accuracy. **Note that coding datasets might not be fairly scored due to their nature.** |
+| 2023 | [Quantifying uncertainty in answers from any language model and enhancing their trustworthiness](https://arxiv.org/pdf/2308.16175) | The pipeline of BSDetector uses both self-consistency and direct scoring to estimate the confidence of a LLM on any given instruction triplet (instruction, content, answer). |
+| 2023 | [Rethinking the Instruction Quality: LIFT is What You Need](https://arxiv.org/pdf/2312.11508) | The pipeline of **expansion first and compression next** enhances both the diversity and quality of the original dataset. Data expansion is performed by GPT4 rewriting (depth, breath, CoT). Diversity is defined via PCA where samples of top-row variances are kept for diversity. Quality is measured by GPT4 direct scoring. |
+| 2024 | [Automated data curation for robust language model fine-tuning](https://arxiv.org/pdf/2403.12776) | The pipeline of auto-cleaning instruction datasets consists of **auto-filter** and **auto-correct**. High-confident samples are first selected via the BSDetector to fine-tune a LLM. Then, candidate generated answers are inferred for all in-confident samples using the fine-tuned LLM. Finally, preference scoring between the original ground-truth answer and the generated answers are obtained using a base model where highly-confident generated answers are kept as the **corrected** answers. |
+| 2024 | [Autonomous data selection with language models for mathematical texts](https://openreview.net/pdf?id=bBF077z8LF) | A simple pipeline to filter out mathematic samples from open-sourced corpus for continue pretraining. Direct scoring via LLMs is effective in selecting high-quality sampels. |
+| 2024 | [QuRating: Selecting High-Quality Data for Training Language Models](https://arxiv.org/pdf/2402.09739) | QuRating defines quality criteria such as writing style, facts and trivia, educational value, and required expertise, and uses GPT-3.5-turbo to judge text pairs to generate labels for training the QuRater model. The fine-tuned QuRater model can then rate the quality of text. Experiments show that the language models trained with data selected by QuRating perform better than those trained with other data selection methods, and different quality criteria have different impacts on model performance, with educational value and required expertise being the most significant. |
+
 
 
 
@@ -120,6 +128,11 @@ Comprehensive Data Assessment and Selection
 
 | Year   |  Title      |  Summary  | 
 | :----: | :--------: |:----------------:|
+| 2023 | [Dataset Quantization](https://arxiv.org/abs/2308.10524) | It proposes a scalable dataset compression method (DQ) that first divides the entire set into a set of non-overlapping bins via the submodular gains recursively. Such division is performed in the embedding space to maximize the diversity gains. Then, the selection of samples is performed via uniformly sampling from each bin to maximize the overall diversity. DQ outperforms traditional diversity-based sampling methods. |
+| 2023 | [Data diversity matters for robust instruction tuning](https://arxiv.org/pdf/2311.14736) | The trade-off exists between the quality and diversity of datapoints. Diversity-prioritized datapoints can improve the worst-case performance. Diversity measures: **maximized similarity** between the sum of selected datapoints and the newly added one from the remaining full set. Quality measures: **ChatGPT direct scoring** and **reward model preference scoring**. |
+| 2023 | [What makes good data for alignment? a comprehensive study of automatic data selection in instruction tuning](https://arxiv.org/pdf/2312.15685) | Datasets can be measured from three dimensions: complexity, quality, and diversity. A dataset is obtained by first performing **evolution on instruction complexity and response quality** of datasets via Evo-Instruct, respectively on each sample and rank these variants from high to low. Subsequently, diversity is considered where newly added samples should share low similarity with the existing dataset. |
+| 2024 | [Balanced Data Sampling for Language Model Training with Clustering](https://arxiv.org/pdf/2402.14526) | Cluster first, then uniformly sample datapoints from each cluster until exhaustion. |
+
 
 
 
@@ -222,9 +235,9 @@ for each evolved instruction, multi-rounds conversations are generated.
 
 - [Beyond neural scaling laws: beating power law scaling via data pruning](https://proceedings.neurips.cc/paper_files/paper/2022/file/7b75da9b61eda40fa35453ee5d077df6-Paper-Conference.pdf) - Apart from the data measurement metrics, the proportion of pruned data with respect to the model size matters. Keep easy samples from small datasets, and difficult samples from big datasets.
 
-- [Autonomous data selection with language models for mathematical texts](https://openreview.net/pdf?id=bBF077z8LF) - A simple pipeline to filter out mathematic samples from open-sourced corpus for continue pretraining. Direct scoring via LLMs is effective in selecting high-quality sampels.
 
-- [Perplexed by Perplexity: Perplexity-Based Data Pruning With Small Reference Models](https://arxiv.org/pdf/2405.20541) - The perplexity of datapoints inferred from a small reference model can be used to prune datasets for training LLMs. Medium and High perplexity selected (via frequency) datapoints are the most beneficial ones. However, the **marginal utility** diminishes when more data (e.g., over the requisite by scaling laws) are involved or more training epochs are repeated.
+
+
 
 - [Codegen2: Lessons for training llms on programming and natural languages](https://arxiv.org/pdf/2305.02309) - One important lesson in organizing coding datasets for pretraining is to permute a portion of sequences for causal LLMs to get the code infilling ability. However, such permutation is not for free, where the performance (with a mixture loss of causal language modeling and prefix/suffix/middle sequence re-ordering) drops compared with the vanilla method (only with the causal language modeling loss).
 
@@ -235,7 +248,7 @@ for each evolved instruction, multi-rounds conversations are generated.
 
 - [D4: Improving llm pretraining via document de-duplication and diversification](https://proceedings.neurips.cc/paper_files/paper/2023/file/a8f8cbd7f7a5fb2c837e578c75e5b615-Paper-Datasets_and_Benchmarks.pdf) - The pruning of datasets can be simply achieved by SemDeDup (semantic deduplication) and prototypicality filtering. Such dedupped and diversified subsets improve downstreaming performance even with repeating training epochs.
 
-- [QuRating: Selecting High-Quality Data for Training Language Models](https://arxiv.org/pdf/2402.09739) - QuRating defines quality criteria such as writing style, facts and trivia, educational value, and required expertise, and uses GPT-3.5-turbo to judge text pairs to generate labels for training the QuRater model. The fine-tuned QuRater model can then rate the quality of text. Experiments show that the language models trained with data selected by QuRating perform better than those trained with other data selection methods, and different quality criteria have different impacts on model performance, with educational value and required expertise being the most significant.
+
 
 
 - [Do NLP and machine learning improve traditional readability formulas?](https://aclanthology.org/W12-2207.pdf) - The investigation of NLP-enabled features and machine learning techniques benefits the development of readability metrics.
@@ -248,29 +261,29 @@ Both these "non-classic" and classific readability formulas can be combined for 
 ### LLM Instruction Fine-tuning and Aligning🛟
 
 
-- [Alpagasus: Training a better alpaca with fewer data](https://arxiv.org/pdf/2307.08701) - It is surprisingly easy and effective to employ strongger models (e.g., GPT3.5, GPT4) to directly score datapoints in terms of helpfulness and accuracy. **Note that coding datasets might not be fairly scored due to their nature.**
 
-- [Instruction mining: High-quality instruction data selection for large language models](https://arxiv.org/pdf/2307.06290) - The loss of the base model on dev and test sets can be viewed as a proxy for measuring the quality of datasets. To avoid the high-cost of retraining and evaluation of base models, one efficient way is to directly estimate the loss of the model for each datapoint based on linear regression with quality indicators (e.g., input length, output length, reward score, perplexity, MTLD, KNN-i, and uni-eval metrics).
+
+
 
 - [Openassistant conversations-democratizing large language model alignment](https://proceedings.neurips.cc/paper_files/paper/2023/file/949f0f8f32267d297c2d4e3ee10a2e7e-Paper-Datasets_and_Benchmarks.pdf) - Each example following the **conversation tree** structure is collected and annotated with human. Dataset pruning is performed with human preference (e.g., creativity, quality, humor, helpfulness, violence, rudeness).
 
 - [Towards a Unified Multi-Dimensional Evaluator for Text Generation](https://arxiv.org/pdf/2210.07197) - The evaluation on text corpus can be explained via **naturalness**, **coherence**, and **understandability**.
 
-- [Rethinking the Instruction Quality: LIFT is What You Need](https://arxiv.org/pdf/2312.11508) - The pipeline of **expansion first and compression next** enhances both the diversity and quality of the original dataset. Data expansion is performed by GPT4 rewriting (depth, breath, CoT). Diversity is defined via PCA where samples of top-row variances are kept for diversity. Quality is measured by GPT4 direct scoring.
+
 
 
 - [Maybe Only 0.5% Data is Needed: A Preliminary Exploration of Low Training Data Instruction Tuning](https://arxiv.org/pdf/2305.09246) - One most cost-efficient way to perform instruction fine-tuning is simply choose the datapoints that highly resemble the downstream datapoints with limited instruction formats. The pipeline of the data pruning consists of **embedding encoding and projecting**, **clustering**, **sampling**, and **model training and infering**. Especially, the sampling by diversity is often adopted as an effective coreset sampling method.
 
-- [Automated data curation for robust language model fine-tuning](https://arxiv.org/pdf/2403.12776) - The pipeline of auto-cleaning instruction datasets consists of **auto-filter** and **auto-correct**. High-confident samples are first selected via the BSDetector to fine-tune a LLM. Then, candidate generated answers are inferred for all in-confident samples using the fine-tuned LLM. Finally, preference scoring between the original ground-truth answer and the generated answers are obtained using a base model where highly-confident generated answers are kept as the **corrected** answers.
+
 
 - [Technical Report: Competition Solution For BetterMixture](https://arxiv.org/pdf/2403.13233) - Giver existing popular open-sourced datasets and the training budget (e.g., number of maximum training tokens), the best option to mix datasets for downstream performance lies in the details of filtering and balancing different datapoints. The entire pipeline includes deduplication (exact match), quality thresholding (language identification, perplexity, IFD scoring and voting), and diversity selection (kcenter-greedy sampling).
 
 - [Exploring Learning Complexity for Downstream Data Pruning](https://arxiv.org/pdf/2402.05356) - The learning complexity of datapoints iss defined as the averaged prediction confidence of subnets with different capacity (predicted label consistency between kNN samples for classification and the sum of perplexity reciprocal for regression). The principle of pruning is keeping the easy and diverse samples.
 
-- [Balanced Data Sampling for Language Model Training with Clustering](https://arxiv.org/pdf/2402.14526) - Cluster first, then uniformly sample datapoints from each cluster until exhaustion.
 
 
-- [What makes good data for alignment? a comprehensive study of automatic data selection in instruction tuning](https://arxiv.org/pdf/2312.15685) - Datasets can be measured from three dimensions: complexity, quality, and diversity. A dataset is obtained by first performing **evolution on instruction complexity and response quality** of datasets via Evo-Instruct, respectively on each sample and rank these variants from high to low. Subsequently, diversity is considered where newly added samples should share low similarity with the existing dataset.
+
+
 
 
 - [Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning](https://arxiv.org/pdf/2402.00530) - A small model (GPT2-125m) can be used to filter instruction-tuningdatasets for training a much larger and stronger model. Specifically, the perplexity and IFD scores of a datapoint from small language models are highly correlated with those from a LLM. Samples with top-k IFD scores (IFD score<1) are chosen for dataset reduction.
@@ -351,7 +364,7 @@ Introducing the automatic data selection architecture based on active learning p
 
 - [Efficient k-nearest neighbor graph construction for generic similarity measures](https://dl.acm.org/doi/pdf/10.1145/1963405.1963487) - The distance to approximate i-th nearest neighbors can be used for **diversity measures**.
 
-- [Data diversity matters for robust instruction tuning](https://arxiv.org/pdf/2311.14736) - The trade-off exists between the quality and diversity of datapoints. Diversity-prioritized datapoints can improve the worst-case performance. Diversity measures: **maximized similarity** between the sum of selected datapoints and the newly added one from the remaining full set. Quality measures: **ChatGPT direct scoring** and **reward model preference scoring**.
+
 
 - [Refined Coreset Selection: Towards Minimal Coreset Size under Model Performance Constraints](https://openreview.net/pdf?id=yb5xV8LFDq) - The selection of datapoints under a constrained budget can be implemented as the lexicographic bilevel-optimization, where the inner loop optimizes model parameters and the outer loop optimizes data selection. When optimizing the selection mask, the minimization of loss terms is relaxed to allow smaller dataset size.
 
@@ -365,9 +378,9 @@ Introducing the automatic data selection architecture based on active learning p
 
 ### Uncertainty❓
 
-- [Quantifying uncertainty in answers from any language model and enhancing their trustworthiness](https://arxiv.org/pdf/2308.16175) - The pipeline of BSDetector uses both self-consistency and direct scoring to estimate the confidence of a LLM on any given instruction triplet (instruction, content, answer).
 
-- [An Experimental Design Framework for Label-Efficient Supervised Finetuning of Large Language Models](https://arxiv.org/pdf/2401.06692) - The selection of datapoints (e.g., prompts) for supervised-finetuning can be mainly categorized as: 1) uncertainty-based selection; 2) k-center selection (e.g., k-center greedy); and 3) submodular selection (maximized diversity). Specifically, uncertainty metrics are defined as: 1) mean entropy; 2) least confidence; 3) mean margin; 4) min margin.
+
+
 
 
 
