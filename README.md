@@ -17,6 +17,7 @@ We will update this repository and paper on a regular basis to maintain up-to-da
 
 
 # News📰
+* **`Dec. 2024`:** 🎉🎉🎉Our survey has been accepted to Transactions on Machine Learning Research (TMLR) with a **Survey Certificate**🪪. Checkout our updated version.
 * **`Aug. 2024`:** 🔥🔥🔥**Come and check out our survey paper for the latest updates on data evaluation and selection!** [[arxiv version](https://arxiv.org/pdf/2408.02085)]
 
 
@@ -127,7 +128,7 @@ We provide related surveys on data measurement and selection for reference.
 | 2024 | [Automated data curation for robust language model fine-tuning](https://arxiv.org/pdf/2403.12776) | The pipeline of auto-cleaning instruction datasets consists of **auto-filter** and **auto-correct**. High-confident samples are first selected via the BSDetector to fine-tune a LLM. Then, candidate generated answers are inferred for all in-confident samples using the fine-tuned LLM. Finally, preference scoring between the original ground-truth answer and the generated answers are obtained using a base model where highly-confident generated answers are kept as the **corrected** answers. |
 | 2024 | [Autonomous data selection with language models for mathematical texts](https://openreview.net/pdf?id=bBF077z8LF) | A simple pipeline to filter out mathematic samples from open-sourced corpus for continue pretraining. Direct scoring via LLMs is effective in selecting high-quality sampels. |
 | 2024 | [QuRating: Selecting High-Quality Data for Training Language Models](https://arxiv.org/pdf/2402.09739) | QuRating defines quality criteria such as writing style, facts and trivia, educational value, and required expertise, and uses GPT-3.5-turbo to judge text pairs to generate labels for training the QuRater model. The fine-tuned QuRater model can then rate the quality of text. Experiments show that the language models trained with data selected by QuRating perform better than those trained with other data selection methods, and different quality criteria have different impacts on model performance, with educational value and required expertise being the most significant. |
-
+| 2024 | [Improving Data Efficiency via Curating LLM-Driven Rating Systems](https://arxiv.org/pdf/2410.10877) | It stems from LLM-based quality scoring systems and pinpoints the inaccuracies and bias problems brought by LLMs. Consequently, it proposes to model the error patterns of LLM-based scorings and corrects these errors to formulate a diversity-promoted selection technique. |
 
 
 
@@ -326,6 +327,7 @@ for each evolved instruction, multi-rounds conversations are generated.
 - [Deepcore: A comprehensive library for coreset selection in deep learning](https://arxiv.org/pdf/2204.08499) - Task-agnostic data sampling (coreset selection) methods include: 1) geometry-based methods (e.g., herding, kcenter-greedy); 2) uncertainty-based methods (e.g., least confidence/entropy/margin); 3) error/loss-based methods (forgetting; GraND/EL2N; importance resampling); 4) decision boundary-based (adversarial deepfool; contrastive active learning); 5) gradient matching-based (gradient approximation towards full set); 6) bi-level optimization-based (inner loop of model optimization and outer loop of datapoint selection); 7) sub-modularity-based (e.g., graph cut; facility location); 8) proxy-based (preference of a small model on data selection).
 
 
+- [Rethinking data selection at scale: Random selection is almost all you need](https://arxiv.org/pdf/2410.09335) - **Random sampling is all you need?** Experimental analysis reveals that diversity is more critical than quality in selection of instruction tuning data. This study sheds light on how instruction tuning should be scaled up in building aligned LLMs with millions of instruction datasets.
 
 
 ## :man_astronaut: Show your support☕️
